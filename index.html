@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FlorAI Workspace</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Outfit', 'sans-serif'],
+              serif: ['Playfair Display', 'serif'],
+            },
+            colors: {
+              primary: 'var(--color-primary)',
+              secondary: 'var(--color-secondary)',
+              surface: 'var(--color-surface)',
+              text: 'var(--color-text)',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      :root {
+        --color-primary: #ec4899;
+        --color-secondary: #fbcfe8;
+        --color-surface: #ffffff;
+        --color-text: #1f2937;
+      }
+      .dark {
+        --color-surface: #111827;
+        --color-text: #f3f4f6;
+      }
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: var(--color-primary);
+        border-radius: 4px;
+        opacity: 0.5;
+      }
+      /* Markdown Styles */
+      .markdown-body h1 { font-size: 2em; font-weight: bold; margin-bottom: 0.5em; margin-top: 1em; color: var(--color-primary); font-family: 'Playfair Display', serif; }
+      .markdown-body h2 { font-size: 1.5em; font-weight: bold; margin-bottom: 0.5em; margin-top: 1em; color: var(--color-text); border-bottom: 1px solid var(--color-primary); padding-bottom: 0.3em; }
+      .markdown-body h3 { font-size: 1.25em; font-weight: bold; margin-bottom: 0.5em; margin-top: 1em; }
+      .markdown-body p { margin-bottom: 1em; line-height: 1.7; }
+      .markdown-body ul { list-style-type: disc; padding-left: 1.5em; margin-bottom: 1em; }
+      .markdown-body ol { list-style-type: decimal; padding-left: 1.5em; margin-bottom: 1em; }
+      .markdown-body blockquote { border-left: 4px solid var(--color-primary); padding-left: 1em; font-style: italic; margin: 1em 0; background: rgba(125, 125, 125, 0.1); padding: 1em; border-radius: 0 8px 8px 0; }
+      .markdown-body table { width: 100%; border-collapse: collapse; margin-bottom: 1em; }
+      .markdown-body th, .markdown-body td { border: 1px solid #555; padding: 8px; text-align: left; }
+      .markdown-body th { background-color: rgba(125, 125, 125, 0.2); }
+      .markdown-body code { background-color: rgba(125, 125, 125, 0.2); padding: 0.2em 0.4em; border-radius: 3px; font-family: monospace; }
+      .markdown-body pre { background-color: #1e1e1e; padding: 1em; border-radius: 8px; overflow-x: auto; margin-bottom: 1em; }
+      .markdown-body pre code { background-color: transparent; padding: 0; }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
+    "d3": "https://aistudiocdn.com/d3@^7.9.0",
+    "js-yaml": "https://esm.sh/js-yaml@4.1.0",
+    "marked": "https://esm.sh/marked@12.0.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
